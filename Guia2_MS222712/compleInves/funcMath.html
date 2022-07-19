@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones de Math</h1>
+   <h3>La función Math.ceil() devuelve el entero mayor o igual más próximo a un número dado.</h3>
+    <script>
+        document.write(Math.ceil(.95));
+        // expected output: 1
+
+        document.write(Math.ceil(4));
+        // expected output: 4
+
+        document.write(Math.ceil(7.004));
+        // expected output: 8
+
+        document.write(Math.ceil(-7.004));
+        // expected output: -7
+    </script>
+
+    <br><br>
+
+   <h3>La función Math.abs() devuelve el valor absoluto de un número. Es decir, devuelve x si x es positivo o cero, y la negación de x si x es negativo</h3>
+    <p>
+        Math.abs('-1');     // 1
+Math.abs(-2);       // 2
+Math.abs(null);     // 0
+Math.abs('');       // 0
+Math.abs([]);       // 0
+Math.abs([2]);      // 2
+Math.abs([1,2]);    // NaN
+Math.abs({});       // NaN
+Math.abs('string'); // NaN
+Math.abs();         // NaN
+    </p>
+
+    <br><br>
+
+    <h3>La función Math.round() retorna el valor de un número redondeado al entero más cercano</h3>
+
+    <p>// Retorna el valor 20
+    x = Math.round(20.49);
+    
+    // Retorna el valor 21
+    x = Math.round(20.5);
+    
+    // Retorna el valor -20
+    x = Math.round(-20.5);
+    
+    // Retorna el valor -21
+    x = Math.round(-20.51);
+    
+    // Retorna el valor 1 (!)
+    // Note el error de redondeo debido a la inexactitud del punto aritmético.
+    // Compare esto con Math.round10(1.005, -2) de el ejemplo de abajo.
+    x = Math.round(1.005*100)/100;</p>
+
+    <br><br>
+
+    <h3>Math.floor() Devuelve el máximo entero menor o igual a un número.</h3>
+    <p>
+        function getFloor(x) {
+            return Math.floor(x);
+        }
+    </p>
+
+    <br><br>
+
+    <h3>La función Math.exp() devuelve ex, donde x es el argumento, y e es El número de Euler (también conocido como la constante de Napier), la base de los algoritmos naturales.</h3>
+    <p>
+        Math.exp(-1); // 0.36787944117144233
+        Math.exp(0);  // 1
+        Math.exp(1);  // 2.718281828459045
+    </p>
+
+    <br><br>
+
+    <h3>La función Math.log() devuelve la base neutral de un número (base e);  ∀x>0,Math.log(x)=ln(x)=the uniqueysuch thatey=x;   La función en JavaScrcrip Math.log() es equivalente a ln(x) en matematicas.</h3>
+    <p>
+        function getBaseLog(x, y) {
+            return Math.log(y) / Math.log(x);
+        }
+          
+          // 2 x 2 x 2 = 8
+          console.log(getBaseLog(2, 8));
+          // expected output: 3
+          
+          // 5 x 5 x 5 x 5 = 625
+          console.log(getBaseLog(5, 625));
+          // expected output: 4
+    </p>
+
+    <br><br><br>
+
+    <h3>La función Math.random() devuelve un número de coma flotante pseudo-aleatorio, comprendido en el rango de 0 a menor que 1 (es decir, incluido el 0 pero no el 1), con una distribución aproximadamente uniforme en este rango. Dicho rango puede ser ampliado hasta los valores deseados. La implementación selecciona la semilla inicial del algoritmo de generación de números aleatorios, no pudiendo ser esta elegida o restablecida por el usuario</h3>
+    <script>
+        function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+document.write(getRandomInt(3));
+// expected output: 0, 1 or 2
+
+
+
+document.write(getRandomInt(1));
+// expected output: 0
+
+
+document.write(Math.random());
+// expected output: a number from 0 to <1
+    </script>
+
+    <a href="../index.html">Volver</a>
+
+</body>
+</html>

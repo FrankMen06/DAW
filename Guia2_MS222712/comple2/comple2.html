@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones push y pop</h1>
+
+    <h3>El método push() añade uno o más elementos al final de un array y devuelve la nueva longitud del array.</h3>
+    <script>
+        const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+document.write(count);
+// expected output: 4
+document.write(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+document.write("<br>");
+animals.push('chickens', 'cats', 'dogs');
+document.write("<br>");
+document.write(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+    </script>
+
+    <h3>El método pop() elimina el último elemento de un array y lo devuelve. Este método cambia la longitud del array.</h3>
+    <script>
+        const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+        document.write(plants.pop());
+// expected output: "tomato"
+
+document.write(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+document.write(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+    </script>
+
+    <a href="../index.html">Volver</a>
+</body>
+</html>
