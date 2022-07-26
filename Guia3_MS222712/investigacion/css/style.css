@@ -1,0 +1,30 @@
+body{
+    background-color: aquamarine;
+}
+
+#tema1{
+    color: red;
+    text-align: center;
+}
+
+h3{
+    background-color: white;
+    justify-content: center;
+}
+
+#ambito2{
+    background-color: lightgray;
+    color: black;
+}
+
+
+
+#ejemplo1, #ejemplo2, #ejemplo3{
+    background: white;
+    font-size: 15px;
+}
+
+#temaejemplo{
+    color: red;
+    font-size: 15px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tema1">¿Qué son las clausulas en JS?</h1>
+
+    <h3>Una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico). En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las
+         clausuras se crean cada vez que una función es creada.
+    </h3>    
+
+    <div class="ambito">
+        <h5 id="ambito2">function iniciar() {
+            var nombre = "Mozilla";  // La variable nombre es una variable local creada por iniciar.
+        </h5>
+    
+        <h5 id="ambito2">function mostrarNombre() {  // La función mostrarNombre es una función interna, una clausura.
+                alert(nombre);  // Usa una variable declarada en la función externa.
+            }
+            mostrarNombre();
+            }
+            iniciar(); 
+        </h5>
+    </div>
+
+    <h1 id="ejemplos">Ejemplos</h1>
+
+    <p id="ejemplo1">const miFuncion = () => {
+        let miValor = 2;
+        console.log(miValor);
+   
+        const funcionHija = () => {
+             console.log(miValor += 1);
+        }
+   
+        funcionHija();
+   }
+   
+   miFuncion();</p>
+
+   <h5 id="temaejemplo">Ejemplo 2</h5>
+   <p id="ejemplo2">const miFuncion = () => {
+    let miValor = 2;
+    console.log(miValor);
+
+    const funcionHija = () => {
+         console.log(miValor += 1);
+    }
+
+    return funcionHija;
+}
+
+const resultado = miFuncion();
+console.log(resultado);
+resultado();
+resultado();
+resultado();
+</p>
+
+<h5 id="temaejemplo">Ejemplo 3</h5>
+<p id="ejemplo3">
+    function creaSumador(x) {
+        return function(y) {
+          return x + y;
+        };
+      }
+      
+      var suma5 = creaSumador(5);
+      var suma10 = creaSumador(10);
+      
+      console.log(suma5(2));  // muestra 7
+      console.log(suma10(2)); // muestra 12 
+</p>
+
+      
+
+</body>
+</html>
